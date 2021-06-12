@@ -1,3 +1,5 @@
+
+{% load accountProperties %}
 <body>
     <style>
         @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
@@ -21,7 +23,7 @@ img{
     top:5vh;
     color: #fff;
     text-align: center;
-    
+    padding-top: 7em;
 }
 
 .context h1 li img{
@@ -141,6 +143,30 @@ img{
     animation-delay: 0s;
     animation-duration: 11s;
 }
+table{
+    text-align: center;
+    margin-left: 12em;
+}
+table, th, td{
+    border: 1px solid darkblue;
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
 
 
 
@@ -162,20 +188,43 @@ img{
     </style>
     <!-- Sourced from https://www.pinclipart.com/pindetail/iRTJimJ_service-catalog-academic-technologies-transparent-background-e-waste/ -->
     <div class="context">
+        </table>
         <h1>Instances linked with your AWS Account:</h1>
-        <ol>
+
+
+        {% if instances %}
+        <table class="instanceTable">
             {% for instance in instances %}
-            <li>
-            {% if forloop.counter0|divisibleby:"2" %}
-                Instance ID --> {{ instance }}
-            {% else %}
-                Instance Status --> {{ instance }} 
-            {% endif %}
-            </li>
+            {% comment %}Instance ID --> EBS Volume --> EBS Status --> <!-- {% if insances%} --> {% endcomment %}
+        <tr>
+            <th>Serial</th>
+            <th>Instance ID</th>
+            <th>EBS Volume ID</th>
+            <th>EBS Volume Size</th>
+            <th>Encyption Status</th>
+
+        </tr>
+        <tr> 
+                <td>{{ forloop.counter }}</td>
+                {% comment %} <!--  {% if forloop.counter0|divisibleby:"2" %} --> {% endcomment %}
+                <td> {{ instance|get_item:'instanceID' }} </td>
+                {% comment %} <!-- {% else %} --> {% endcomment %}
+                <td>{{ instance|get_item:'Ebs_volume' }}</td>
+                <td>{{ instance|get_item:'Ebs_size' }} GiB</td>
+                {% comment %} <br> {% endcomment %}
+                <td>{{ instance|get_item:'Ebs_status' }} </td>
+                {% comment %} <br> {% endcomment %}
+                {% comment %} <!-- {% endif %} -->  {% endcomment %}
+        </tr> 
             {% endfor %}
-        </ol>
+        </table>
+        {% else %}
+        <h1>No instances are linked!</h1>
+        {% endif %}
     </div>
 
+
+    <h2>Number of Users linked with AWS Account: {{ counter1 }} </h2>
 
 
 
@@ -194,3 +243,6 @@ img{
             </ul>
     </div >
 </body>
+
+
+{% comment %} <!-- User {{ instance["User"] }}  --> {% endcomment %}
