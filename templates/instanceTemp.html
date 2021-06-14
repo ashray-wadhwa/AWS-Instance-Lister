@@ -206,15 +206,10 @@ h2{
         </tr>
         <tr> 
                 <td>{{ forloop.counter }}</td>
-                {% comment %} <!--  {% if forloop.counter0|divisibleby:"2" %} --> {% endcomment %}
                 <td> {{ instance|get_item:'instanceID' }} </td>
-                {% comment %} <!-- {% else %} --> {% endcomment %}
                 <td>{{ instance|get_item:'Ebs_volume' }}</td>
                 <td>{{ instance|get_item:'Ebs_size' }} GiB</td>
-                {% comment %} <br> {% endcomment %}
                 <td>{{ instance|get_item:'Ebs_status' }} </td>
-                {% comment %} <br> {% endcomment %}
-                {% comment %} <!-- {% endif %} -->  {% endcomment %}
         </tr> 
             {% endfor %}
         </table>
@@ -224,7 +219,7 @@ h2{
     </div>
 
 
-    <h2>Number of Users linked with AWS Account: {{ counter1 }} </h2>
+    <h2>Number of Users linked with AWS Account: {{ counter }} </h2>
 
 
 

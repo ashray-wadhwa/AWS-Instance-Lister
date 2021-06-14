@@ -2,7 +2,7 @@ argcomplete==1.12.2
 asgiref==3.3.4
 attrs==20.3.0
 boto3==1.17.33
-botocore==1.20.33
+botocore @ file:///Users/ashraywadhwa/Library/Caches/pypoetry/artifacts/87/08/da/696f30e81e0b4c53517956ac9e762703f8b1c0b9e17df6bdff91db1e85/botocore-1.20.33-py2.py3-none-any.whl
 c7n==0.9.11
 Django==3.2.4
 importlib-metadata==3.7.3
@@ -13,10 +13,10 @@ pyrsistent==0.17.3
 python-dateutil==2.8.1
 pytz==2021.1
 PyYAML==5.4.1
-s3transfer==0.3.6
-six==1.15.0
+s3transfer @ file:///Users/ashraywadhwa/Library/Caches/pypoetry/artifacts/26/79/46/ab118883797af43637ae5c2a15ef3eec40fc2639eeffdd5d0fa3ea4e65/s3transfer-0.3.6-py2.py3-none-any.whl
+six @ file:///Users/ashraywadhwa/Library/Caches/pypoetry/artifacts/dd/1c/65/ad0dea11136f5a869f072890a0eea955aa8fc35b90c85c55249fd3abfe/six-1.15.0-py2.py3-none-any.whl
 sqlparse==0.4.1
 tabulate==0.8.9
 typing-extensions==3.7.4.3
-urllib3==1.26.4
+urllib3 @ file:///Users/ashraywadhwa/Library/Caches/pypoetry/artifacts/fa/fd/9d/56169af5b3d1505ce8a40dc152136e8733b2df5060a6f86f013a1a9b3d/urllib3-1.26.4-py2.py3-none-any.whl
 zipp==3.4.1

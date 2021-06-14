@@ -1,36 +1,38 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
+import sys
 import boto3
 ec2 = boto3.client('ec2')
-ec2Resource = boto3.resource('ec2', region_name='us-east-2')
-client1 = boto3.client('iam') 
+ec2_resource = boto3.resource('ec2', region_name='us-east-2')
+iam_client = boto3.client('iam') 
 # client2 = boto3.client('organizations')
-responseInstance = ec2.describe_instances()
-instanceList = []
-instanceMap = {}
-tempValue = ""
-sizeList = []
+response_instance = ec2.describe_instances()
+instance_list = []
+instance_map = {}
+temp_value = ""
+log = open("myprog.log", "a")
+sys.stdout = log
 print("-----------------------------------------------------------------")
-if (len(responseInstance['Reservations']) == 0):
+if (len(response_instance['Reservations']) == 0):
     print("No instances")
 else:
-    print(responseInstance)
-    for r in responseInstance['Reservations']:
-        volumeCounter=0
+    print(response_instance)
+    for r in response_instance['Reservations']:
+        volume_counter=0
         for i in r['Instances']:
-            instanceMap["instanceID"]=i['InstanceId']
-            tempValue = i['InstanceId']
-            ec2Instance = ec2Resource.Instance(tempValue)
+            instance_map["instanceID"]=i['InstanceId']
+            temp_value = i['InstanceId']
+            ec2Instance = ec2_resource.Instance(temp_value)
             volumes = ec2Instance.volumes.all()
             for volume in volumes:
-                instanceMap["Ebs_size"]=volume.size
+                instance_map["Ebs_size"]=volume.size
             for j in i['BlockDeviceMappings']:
-                instanceMap["Ebs_volume"]=j['Ebs']['VolumeId']
-                instanceMap["Ebs_status"]=j['Ebs']['Status']
+                instance_map["Ebs_volume"]=j['Ebs']['VolumeId']
+                instance_map["Ebs_status"]=j['Ebs']['Status']
 
-            instanceList.append(instanceMap.copy())
-            instanceMap.clear()
-            volumeCounter=volumeCounter+1
+            instance_list.append(instance_map.copy())
+            instance_map.clear()
+            volume_counter=volume_counter+1
 
             # instanceList.append(i['State']['Name'])
             # i['InstanceId']
@@ -42,10 +44,10 @@ else:
     
 print("-----------------------------------------------------------------")
 
-response = client1.list_users()
-counter1 = 0
+response = iam_client.list_users()
+counter = 0
 for x in response['Users']:
-    counter1 = counter1+1
+    counter = counter+1
 
 # response2 = client2.describe_organization()
 # counter2 = 0
@@ -66,6 +68,6 @@ for x in response['Users']:
 # Create your views here.
 def instanceView(request):
     # return HttpResponse('hello, this is instanceView')
-    return render(request, 'instanceTemp.html', {"instances": instanceList, "counter1":counter1})
+    return render(request, 'instanceTemp.html', {"instances": instance_list, "counter":counter})
     # , "types": typeList
     # , "sizeList":sizeList
