@@ -18,5 +18,5 @@ from django.urls import path
 from instance_component.views import instanceView
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('instance/', instanceView),
+    path('instance/', instanceView, name='instance_view'),
 ]

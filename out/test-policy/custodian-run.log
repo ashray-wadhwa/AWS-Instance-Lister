@@ -1,0 +1,6 @@
+2021-06-15 11:39:31,348 - custodian.cache - WARNING - Could not save cache /Users/ashraywadhwa/.cache/cloud-custodian.cache err: [Errno 2] No such file or directory: '/Users/ashraywadhwa/.cache/cloud-custodian.cache'
+2021-06-15 11:39:31,348 - custodian.cache - INFO - Generating Cache directory: /Users/ashraywadhwa/.cache.
+2021-06-15 11:39:31,619 - custodian.policy - INFO - policy:test-policy resource:aws.ec2 region:us-east-2 count:0 time:0.74
+2021-06-15 11:40:24,103 - custodian.policy - INFO - policy:test-policy resource:aws.ec2 region:us-east-2 count:0 time:0.59
+2021-06-15 11:41:50,251 - custodian.policy - INFO - policy:test-policy resource:aws.ec2 region:us-east-2 count:0 time:0.30
+2021-06-15 11:43:20,449 - custodian.policy - INFO - policy:test-policy resource:aws.ec2 region:us-east-2 count:0 time:0.30

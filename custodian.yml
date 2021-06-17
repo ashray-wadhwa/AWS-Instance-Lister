@@ -1,0 +1,13 @@
+policies:
+  - name: test-policy
+    resource: aws.ec2
+    filters: 
+    - "State.Name": running
+    - type: ebs
+      op: eq
+      key: "State[0]"
+      value_type: size
+      value: '8'
+    actions:
+      - stop
+      
