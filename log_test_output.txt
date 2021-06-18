@@ -1,0 +1,634 @@
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fb4bb1fab80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fb4bb1aa8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/boto3/data/ec2/2016-11-15/resources-1.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fb4bb1fab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fb4bb1aa8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7fb4bb6da820>
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fb4bb1fab80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/iam/2010-05-08/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.iam: calling handler <function add_generate_presigned_url at 0x7fb4bb1aa8b0>
+DEBUG:botocore.regions:Using partition endpoint for iam, us-east-2: aws-global
+DEBUG:botocore.endpoint:Setting iam timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: iam
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7fb4bb21f310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <function generate_idempotent_uuid at 0x7fb4bb21a040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeInstances: calling handler <function inject_api_version_header_if_needed at 0x7fb4bb21c8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeInstances) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeInstances', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7fb4bca43d60>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fb4bca43b80>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeInstances: calling handler <function set_operation_specific_signer at 0x7fb4bb216ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024429Z
+
+content-type;host;x-amz-date
+6171eb09865e32b0602af0f7957e26573a51f53caaedff02ff88883cb0275885
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024429Z
+20210618/us-east-2/ec2/aws4_request
+c844042ad7ec2595068aae7f680cce194ce311895d162146c5e4db4367d04ff8
+DEBUG:botocore.auth:Signature:
+8ae6128dca0d91f88ad7b6bf098a990376cbccac17f36a9191e710e960ed6426
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024429Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=8ae6128dca0d91f88ad7b6bf098a990376cbccac17f36a9191e710e960ed6426', 'Content-Length': '43'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ec2.us-east-2.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 7097
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '3fedafe5-3201-4695-b107-233d37c7d3ed', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '7097', 'vary': 'accept-encoding', 'Date': 'Fri, 18 Jun 2021 02:44:28 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>3fedafe5-3201-4695-b107-233d37c7d3ed</requestId>\n    <reservationSet>\n        <item>\n            <reservationId>r-07694edafe46b7850</reservationId>\n            <ownerId>413985338260</ownerId>\n            <groupSet/>\n            <instancesSet>\n                <item>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <imageId>ami-0b9064170e32bde34</imageId>\n                    <instanceState>\n                        <code>16</code>\n                        <name>running</name>\n                    </instanceState>\n                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                    <dnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</dnsName>\n                    <reason/>\n                    <keyName>29656536_New</keyName>\n                    <amiLaunchIndex>0</amiLaunchIndex>\n                    <productCodes/>\n                    <instanceType>t2.micro</instanceType>\n                    <launchTime>2021-06-07T14:49:11.000Z</launchTime>\n                    <placement>\n                        <availabilityZone>us-east-2c</availabilityZone>\n                        <groupName/>\n                        <tenancy>default</tenancy>\n                    </placement>\n                    <monitoring>\n                        <state>disabled</state>\n                    </monitoring>\n                    <subnetId>subnet-389cb974</subnetId>\n                    <vpcId>vpc-9fe17ef4</vpcId>\n                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                    <ipAddress>3.143.216.57</ipAddress>\n                    <sourceDestCheck>true</sourceDestCheck>\n                    <groupSet>\n                        <item>\n                            <groupId>sg-016ee93ecb20b987e</groupId>\n                            <groupName>launch-wizard-1</groupName>\n                        </item>\n                    </groupSet>\n                    <architecture>x86_64</architecture>\n                    <rootDeviceType>ebs</rootDeviceType>\n                    <rootDeviceName>/dev/sda1</rootDeviceName>\n                    <blockDeviceMapping>\n                        <item>\n                            <deviceName>/dev/sda1</deviceName>\n                            <ebs>\n                                <volumeId>vol-085cf057fc0d9953d</volumeId>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                            </ebs>\n                        </item>\n                    </blockDeviceMapping>\n                    <virtualizationType>hvm</virtualizationType>\n                    <clientToken/>\n                    <hypervisor>xen</hypervisor>\n                    <networkInterfaceSet>\n                        <item>\n                            <networkInterfaceId>eni-0c850a5695cfef3e3</networkInterfaceId>\n                            <subnetId>subnet-389cb974</subnetId>\n                            <vpcId>vpc-9fe17ef4</vpcId>\n                            <description/>\n                            <ownerId>413985338260</ownerId>\n                            <status>in-use</status>\n                            <macAddress>0a:2b:2f:2d:1d:dc</macAddress>\n                            <privateIpAddress>172.31.36.142</privateIpAddress>\n                            <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                            <sourceDestCheck>true</sourceDestCheck>\n                            <groupSet>\n                                <item>\n                                    <groupId>sg-016ee93ecb20b987e</groupId>\n                                    <groupName>launch-wizard-1</groupName>\n                                </item>\n                            </groupSet>\n                            <attachment>\n                                <attachmentId>eni-attach-044280d42f2d34ff9</attachmentId>\n                                <deviceIndex>0</deviceIndex>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:11.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                                <networkCardIndex>0</networkCardIndex>\n                            </attachment>\n                            <association>\n                                <publicIp>3.143.216.57</publicIp>\n                                <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                <ipOwnerId>amazon</ipOwnerId>\n                            </association>\n                            <privateIpAddressesSet>\n                                <item>\n                                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                                    <primary>true</primary>\n                                    <association>\n                                    <publicIp>3.143.216.57</publicIp>\n                                    <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                    <ipOwnerId>amazon</ipOwnerId>\n                                    </association>\n                                </item>\n                            </privateIpAddressesSet>\n                            <ipv6AddressesSet/>\n                            <interfaceType>interface</interfaceType>\n                        </item>\n                    </networkInterfaceSet>\n                    <ebsOptimized>false</ebsOptimized>\n                    <enaSupport>true</enaSupport>\n                    <cpuOptions>\n                        <coreCount>1</coreCount>\n                        <threadsPerCore>1</threadsPerCore>\n                    </cpuOptions>\n                    <capacityReservationSpecification>\n                        <capacityReservationPreference>open</capacityReservationPreference>\n                    </capacityReservationSpecification>\n                    <hibernationOptions>\n                        <configured>false</configured>\n                    </hibernationOptions>\n                    <enclaveOptions>\n                        <enabled>false</enabled>\n                    </enclaveOptions>\n                    <metadataOptions>\n                        <state>applied</state>\n                        <httpTokens>optional</httpTokens>\n                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>\n                        <httpEndpoint>enabled</httpEndpoint>\n                    </metadataOptions>\n                    <privateDnsNameOptions/>\n                </item>\n            </instancesSet>\n        </item>\n    </reservationSet>\n</DescribeInstancesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x7fb4bca63760>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7fb4bb21f310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <function generate_idempotent_uuid at 0x7fb4bb21a040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeVolumes: calling handler <function inject_api_version_header_if_needed at 0x7fb4bb21c8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeVolumes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeVolumes', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7fb4bca43d60>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeVolumes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fb4bca43b80>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeVolumes: calling handler <function set_operation_specific_signer at 0x7fb4bb216ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024429Z
+
+content-type;host;x-amz-date
+925be3c8fc6870a890a6670574a88c988b51f13d9ea74f458ce9b6972534f164
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024429Z
+20210618/us-east-2/ec2/aws4_request
+9c639c91953efead81f494a0bd49e379745c3e9e12c3222b5e95dfc08d1f6cfd
+DEBUG:botocore.auth:Signature:
+0e8d34e35fb51bc85569d2532df7550a0e138c466ba0164a8a8cabd47b3b5e5f
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024429Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=0e8d34e35fb51bc85569d2532df7550a0e138c466ba0164a8a8cabd47b3b5e5f', 'Content-Length': '41'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 1201
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'a6c72180-c9d4-4cdc-b43a-d02ca9610f0d', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '1201', 'Date': 'Fri, 18 Jun 2021 02:44:28 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeVolumesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>a6c72180-c9d4-4cdc-b43a-d02ca9610f0d</requestId>\n    <volumeSet>\n        <item>\n            <volumeId>vol-085cf057fc0d9953d</volumeId>\n            <size>8</size>\n            <snapshotId>snap-05bc449e542abbf3d</snapshotId>\n            <availabilityZone>us-east-2c</availabilityZone>\n            <status>in-use</status>\n            <createTime>2021-06-07T14:49:12.109Z</createTime>\n            <attachmentSet>\n                <item>\n                    <volumeId>vol-085cf057fc0d9953d</volumeId>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <device>/dev/sda1</device>\n                    <status>attached</status>\n                    <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                    <deleteOnTermination>true</deleteOnTermination>\n                </item>\n            </attachmentSet>\n            <volumeType>gp2</volumeType>\n            <iops>100</iops>\n            <encrypted>false</encrypted>\n            <multiAttachEnabled>false</multiAttachEnabled>\n        </item>\n    </volumeSet>\n</DescribeVolumesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeVolumes: calling handler <botocore.retryhandler.RetryHandler object at 0x7fb4bca63760>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:-----------------------------------------------------------------
+INFO:root:-----------------------------------------------------------------
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+DEBUG:botocore.hooks:Event before-parameter-build.iam.ListUsers: calling handler <function generate_idempotent_uuid at 0x7fb4bb21a040>
+DEBUG:botocore.hooks:Event before-call.iam.ListUsers: calling handler <function inject_api_version_header_if_needed at 0x7fb4bb21c8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=ListUsers) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'ListUsers', 'Version': '2010-05-08'}, 'url': 'https://iam.amazonaws.com/', 'context': {'client_region': 'aws-global', 'client_config': <botocore.config.Config object at 0x7fb4bcfad4f0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.iam.ListUsers: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fb4bcfad460>>
+DEBUG:botocore.hooks:Event choose-signer.iam.ListUsers: calling handler <function set_operation_specific_signer at 0x7fb4bb216ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:iam.amazonaws.com
+x-amz-date:20210618T024429Z
+
+content-type;host;x-amz-date
+b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024429Z
+20210618/us-east-1/iam/aws4_request
+a1ef93c7b1730b8f707591b814c9c6174b33b9bd89eaeb1b41ff4a249c10519f
+DEBUG:botocore.auth:Signature:
+9773694d68f7f52f00cd17d903983466de0378507a8f79a74ab9c808a2f987b2
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://iam.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024429Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=9773694d68f7f52f00cd17d903983466de0378507a8f79a74ab9c808a2f987b2', 'Content-Length': '35'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): iam.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://iam.amazonaws.com:443 "POST / HTTP/1.1" 200 547
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '82f7a6e0-84f9-4989-bfda-165327c156b2', 'Content-Type': 'text/xml', 'Content-Length': '547', 'Date': 'Fri, 18 Jun 2021 02:44:29 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'<ListUsersResponse xmlns="https://iam.amazonaws.com/doc/2010-05-08/">\n  <ListUsersResult>\n    <IsTruncated>false</IsTruncated>\n    <Users>\n      <member>\n        <Path>/</Path>\n        <Arn>arn:aws:iam::413985338260:user/user1</Arn>\n        <UserName>user1</UserName>\n        <UserId>AIDAWAY3S6OKL4TICOEAF</UserId>\n        <CreateDate>2021-06-04T19:34:16Z</CreateDate>\n      </member>\n    </Users>\n  </ListUsersResult>\n  <ResponseMetadata>\n    <RequestId>82f7a6e0-84f9-4989-bfda-165327c156b2</RequestId>\n  </ResponseMetadata>\n</ListUsersResponse>\n'
+DEBUG:botocore.hooks:Event needs-retry.iam.ListUsers: calling handler <botocore.retryhandler.RetryHandler object at 0x7fb4bcfaddf0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event after-call.iam.ListUsers: calling handler <function json_decode_policies at 0x7fb4bb21ab80>
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fb4bb1fab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fb4bb1aa8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fb4bb1fab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fb4bb1aa8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7fb4bb6da820>
+INFO:root:Volumes -> 
+INFO:root:{'Volumes': [{'Size': 8}]}
+INFO:root:Congratulations, you successfully added a mock instance!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+INFO:root:Entered rendering function!
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9bda8b9b80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7f9bda8698b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/boto3/data/ec2/2016-11-15/resources-1.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9bda8b9b80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7f9bda8698b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7f9bdad9a820>
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9bda8b9b80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/iam/2010-05-08/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.iam: calling handler <function add_generate_presigned_url at 0x7f9bda8698b0>
+DEBUG:botocore.regions:Using partition endpoint for iam, us-east-2: aws-global
+DEBUG:botocore.endpoint:Setting iam timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: iam
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7f9bda8df310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <function generate_idempotent_uuid at 0x7f9bda8da040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeInstances: calling handler <function inject_api_version_header_if_needed at 0x7f9bda8dc8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeInstances) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeInstances', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7f9bdc003d30>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f9bdc003b50>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeInstances: calling handler <function set_operation_specific_signer at 0x7f9bda8d6ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024533Z
+
+content-type;host;x-amz-date
+6171eb09865e32b0602af0f7957e26573a51f53caaedff02ff88883cb0275885
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024533Z
+20210618/us-east-2/ec2/aws4_request
+ebf6e8aa6715659e99a60b6e5141e7f76a47547e520b3278a791949d21a47901
+DEBUG:botocore.auth:Signature:
+65356fdf16abade19f925e3ff5aa2fba944fb1b23fdda9f7431a7f891220b0c4
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024533Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=65356fdf16abade19f925e3ff5aa2fba944fb1b23fdda9f7431a7f891220b0c4', 'Content-Length': '43'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ec2.us-east-2.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 7097
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '248e36d4-a38b-42dd-a087-94412f1072d5', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '7097', 'vary': 'accept-encoding', 'Date': 'Fri, 18 Jun 2021 02:45:33 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>248e36d4-a38b-42dd-a087-94412f1072d5</requestId>\n    <reservationSet>\n        <item>\n            <reservationId>r-07694edafe46b7850</reservationId>\n            <ownerId>413985338260</ownerId>\n            <groupSet/>\n            <instancesSet>\n                <item>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <imageId>ami-0b9064170e32bde34</imageId>\n                    <instanceState>\n                        <code>16</code>\n                        <name>running</name>\n                    </instanceState>\n                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                    <dnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</dnsName>\n                    <reason/>\n                    <keyName>29656536_New</keyName>\n                    <amiLaunchIndex>0</amiLaunchIndex>\n                    <productCodes/>\n                    <instanceType>t2.micro</instanceType>\n                    <launchTime>2021-06-07T14:49:11.000Z</launchTime>\n                    <placement>\n                        <availabilityZone>us-east-2c</availabilityZone>\n                        <groupName/>\n                        <tenancy>default</tenancy>\n                    </placement>\n                    <monitoring>\n                        <state>disabled</state>\n                    </monitoring>\n                    <subnetId>subnet-389cb974</subnetId>\n                    <vpcId>vpc-9fe17ef4</vpcId>\n                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                    <ipAddress>3.143.216.57</ipAddress>\n                    <sourceDestCheck>true</sourceDestCheck>\n                    <groupSet>\n                        <item>\n                            <groupId>sg-016ee93ecb20b987e</groupId>\n                            <groupName>launch-wizard-1</groupName>\n                        </item>\n                    </groupSet>\n                    <architecture>x86_64</architecture>\n                    <rootDeviceType>ebs</rootDeviceType>\n                    <rootDeviceName>/dev/sda1</rootDeviceName>\n                    <blockDeviceMapping>\n                        <item>\n                            <deviceName>/dev/sda1</deviceName>\n                            <ebs>\n                                <volumeId>vol-085cf057fc0d9953d</volumeId>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                            </ebs>\n                        </item>\n                    </blockDeviceMapping>\n                    <virtualizationType>hvm</virtualizationType>\n                    <clientToken/>\n                    <hypervisor>xen</hypervisor>\n                    <networkInterfaceSet>\n                        <item>\n                            <networkInterfaceId>eni-0c850a5695cfef3e3</networkInterfaceId>\n                            <subnetId>subnet-389cb974</subnetId>\n                            <vpcId>vpc-9fe17ef4</vpcId>\n                            <description/>\n                            <ownerId>413985338260</ownerId>\n                            <status>in-use</status>\n                            <macAddress>0a:2b:2f:2d:1d:dc</macAddress>\n                            <privateIpAddress>172.31.36.142</privateIpAddress>\n                            <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                            <sourceDestCheck>true</sourceDestCheck>\n                            <groupSet>\n                                <item>\n                                    <groupId>sg-016ee93ecb20b987e</groupId>\n                                    <groupName>launch-wizard-1</groupName>\n                                </item>\n                            </groupSet>\n                            <attachment>\n                                <attachmentId>eni-attach-044280d42f2d34ff9</attachmentId>\n                                <deviceIndex>0</deviceIndex>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:11.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                                <networkCardIndex>0</networkCardIndex>\n                            </attachment>\n                            <association>\n                                <publicIp>3.143.216.57</publicIp>\n                                <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                <ipOwnerId>amazon</ipOwnerId>\n                            </association>\n                            <privateIpAddressesSet>\n                                <item>\n                                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                                    <primary>true</primary>\n                                    <association>\n                                    <publicIp>3.143.216.57</publicIp>\n                                    <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                    <ipOwnerId>amazon</ipOwnerId>\n                                    </association>\n                                </item>\n                            </privateIpAddressesSet>\n                            <ipv6AddressesSet/>\n                            <interfaceType>interface</interfaceType>\n                        </item>\n                    </networkInterfaceSet>\n                    <ebsOptimized>false</ebsOptimized>\n                    <enaSupport>true</enaSupport>\n                    <cpuOptions>\n                        <coreCount>1</coreCount>\n                        <threadsPerCore>1</threadsPerCore>\n                    </cpuOptions>\n                    <capacityReservationSpecification>\n                        <capacityReservationPreference>open</capacityReservationPreference>\n                    </capacityReservationSpecification>\n                    <hibernationOptions>\n                        <configured>false</configured>\n                    </hibernationOptions>\n                    <enclaveOptions>\n                        <enabled>false</enabled>\n                    </enclaveOptions>\n                    <metadataOptions>\n                        <state>applied</state>\n                        <httpTokens>optional</httpTokens>\n                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>\n                        <httpEndpoint>enabled</httpEndpoint>\n                    </metadataOptions>\n                    <privateDnsNameOptions/>\n                </item>\n            </instancesSet>\n        </item>\n    </reservationSet>\n</DescribeInstancesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x7f9bdc023730>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7f9bda8df310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <function generate_idempotent_uuid at 0x7f9bda8da040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeVolumes: calling handler <function inject_api_version_header_if_needed at 0x7f9bda8dc8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeVolumes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeVolumes', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7f9bdc003d30>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeVolumes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f9bdc003b50>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeVolumes: calling handler <function set_operation_specific_signer at 0x7f9bda8d6ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024533Z
+
+content-type;host;x-amz-date
+925be3c8fc6870a890a6670574a88c988b51f13d9ea74f458ce9b6972534f164
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024533Z
+20210618/us-east-2/ec2/aws4_request
+735beff177892da0093672ae5ad1c556fbb606fe448f49768550230e8140da52
+DEBUG:botocore.auth:Signature:
+129f2f0df70f5116b46a34cd590f9f2266d84550ccc97fdcd83450a6544a2d99
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024533Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=129f2f0df70f5116b46a34cd590f9f2266d84550ccc97fdcd83450a6544a2d99', 'Content-Length': '41'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 1201
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '34660824-29be-4a84-9ebd-788f5c896a24', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '1201', 'Date': 'Fri, 18 Jun 2021 02:45:33 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeVolumesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>34660824-29be-4a84-9ebd-788f5c896a24</requestId>\n    <volumeSet>\n        <item>\n            <volumeId>vol-085cf057fc0d9953d</volumeId>\n            <size>8</size>\n            <snapshotId>snap-05bc449e542abbf3d</snapshotId>\n            <availabilityZone>us-east-2c</availabilityZone>\n            <status>in-use</status>\n            <createTime>2021-06-07T14:49:12.109Z</createTime>\n            <attachmentSet>\n                <item>\n                    <volumeId>vol-085cf057fc0d9953d</volumeId>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <device>/dev/sda1</device>\n                    <status>attached</status>\n                    <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                    <deleteOnTermination>true</deleteOnTermination>\n                </item>\n            </attachmentSet>\n            <volumeType>gp2</volumeType>\n            <iops>100</iops>\n            <encrypted>false</encrypted>\n            <multiAttachEnabled>false</multiAttachEnabled>\n        </item>\n    </volumeSet>\n</DescribeVolumesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeVolumes: calling handler <botocore.retryhandler.RetryHandler object at 0x7f9bdc023730>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:-----------------------------------------------------------------
+INFO:root:-----------------------------------------------------------------
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+DEBUG:botocore.hooks:Event before-parameter-build.iam.ListUsers: calling handler <function generate_idempotent_uuid at 0x7f9bda8da040>
+DEBUG:botocore.hooks:Event before-call.iam.ListUsers: calling handler <function inject_api_version_header_if_needed at 0x7f9bda8dc8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=ListUsers) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'ListUsers', 'Version': '2010-05-08'}, 'url': 'https://iam.amazonaws.com/', 'context': {'client_region': 'aws-global', 'client_config': <botocore.config.Config object at 0x7f9bdc56c4c0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.iam.ListUsers: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7f9bdc56c430>>
+DEBUG:botocore.hooks:Event choose-signer.iam.ListUsers: calling handler <function set_operation_specific_signer at 0x7f9bda8d6ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:iam.amazonaws.com
+x-amz-date:20210618T024533Z
+
+content-type;host;x-amz-date
+b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024533Z
+20210618/us-east-1/iam/aws4_request
+77dff417a7c0345e2bbb05cecab94c83203443a492d99736a3aeda2269078818
+DEBUG:botocore.auth:Signature:
+e09f6639230b674982023e41d3453fb428b9dfe43be11039e5a31b8e35b65c1b
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://iam.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024533Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=e09f6639230b674982023e41d3453fb428b9dfe43be11039e5a31b8e35b65c1b', 'Content-Length': '35'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): iam.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://iam.amazonaws.com:443 "POST / HTTP/1.1" 200 547
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '38e70ff3-b8a5-40fd-8bfd-1998df3b227c', 'Content-Type': 'text/xml', 'Content-Length': '547', 'Date': 'Fri, 18 Jun 2021 02:45:33 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'<ListUsersResponse xmlns="https://iam.amazonaws.com/doc/2010-05-08/">\n  <ListUsersResult>\n    <IsTruncated>false</IsTruncated>\n    <Users>\n      <member>\n        <Path>/</Path>\n        <Arn>arn:aws:iam::413985338260:user/user1</Arn>\n        <UserName>user1</UserName>\n        <UserId>AIDAWAY3S6OKL4TICOEAF</UserId>\n        <CreateDate>2021-06-04T19:34:16Z</CreateDate>\n      </member>\n    </Users>\n  </ListUsersResult>\n  <ResponseMetadata>\n    <RequestId>38e70ff3-b8a5-40fd-8bfd-1998df3b227c</RequestId>\n  </ResponseMetadata>\n</ListUsersResponse>\n'
+DEBUG:botocore.hooks:Event needs-retry.iam.ListUsers: calling handler <botocore.retryhandler.RetryHandler object at 0x7f9bdc56cdc0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event after-call.iam.ListUsers: calling handler <function json_decode_policies at 0x7f9bda8dab80>
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9bda8b9b80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7f9bda8698b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7f9bda8b9b80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7f9bda8698b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7f9bdad9a820>
+INFO:root:Volumes -> 
+INFO:root:{'Volumes': [{'Size': 8}]}
+INFO:root:Congratulations, you successfully added a mock instance!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+INFO:root:Entered rendering function!
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7ff31317ab80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7ff31312a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/boto3/data/ec2/2016-11-15/resources-1.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7ff31317ab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7ff31312a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7ff31369a820>
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7ff31317ab80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/iam/2010-05-08/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.iam: calling handler <function add_generate_presigned_url at 0x7ff31312a8b0>
+DEBUG:botocore.regions:Using partition endpoint for iam, us-east-2: aws-global
+DEBUG:botocore.endpoint:Setting iam timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: iam
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7ff3131a0310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <function generate_idempotent_uuid at 0x7ff31319b040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeInstances: calling handler <function inject_api_version_header_if_needed at 0x7ff31319d8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeInstances) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeInstances', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7ff314903cd0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7ff314903af0>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeInstances: calling handler <function set_operation_specific_signer at 0x7ff313197ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024654Z
+
+content-type;host;x-amz-date
+6171eb09865e32b0602af0f7957e26573a51f53caaedff02ff88883cb0275885
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024654Z
+20210618/us-east-2/ec2/aws4_request
+0ac58f0b398676e89b28b1b84f05bdf1fa09f3e5fb13030ae27ffea60851fe34
+DEBUG:botocore.auth:Signature:
+85f3d8c42395a2e0d8a4521af5b05f6363ae2d2673c3fae235c1b29f99969e70
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024654Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=85f3d8c42395a2e0d8a4521af5b05f6363ae2d2673c3fae235c1b29f99969e70', 'Content-Length': '43'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ec2.us-east-2.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 7097
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '4620dd01-a975-4a03-87f7-c33dab662fb9', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '7097', 'vary': 'accept-encoding', 'Date': 'Fri, 18 Jun 2021 02:46:53 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>4620dd01-a975-4a03-87f7-c33dab662fb9</requestId>\n    <reservationSet>\n        <item>\n            <reservationId>r-07694edafe46b7850</reservationId>\n            <ownerId>413985338260</ownerId>\n            <groupSet/>\n            <instancesSet>\n                <item>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <imageId>ami-0b9064170e32bde34</imageId>\n                    <instanceState>\n                        <code>16</code>\n                        <name>running</name>\n                    </instanceState>\n                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                    <dnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</dnsName>\n                    <reason/>\n                    <keyName>29656536_New</keyName>\n                    <amiLaunchIndex>0</amiLaunchIndex>\n                    <productCodes/>\n                    <instanceType>t2.micro</instanceType>\n                    <launchTime>2021-06-07T14:49:11.000Z</launchTime>\n                    <placement>\n                        <availabilityZone>us-east-2c</availabilityZone>\n                        <groupName/>\n                        <tenancy>default</tenancy>\n                    </placement>\n                    <monitoring>\n                        <state>disabled</state>\n                    </monitoring>\n                    <subnetId>subnet-389cb974</subnetId>\n                    <vpcId>vpc-9fe17ef4</vpcId>\n                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                    <ipAddress>3.143.216.57</ipAddress>\n                    <sourceDestCheck>true</sourceDestCheck>\n                    <groupSet>\n                        <item>\n                            <groupId>sg-016ee93ecb20b987e</groupId>\n                            <groupName>launch-wizard-1</groupName>\n                        </item>\n                    </groupSet>\n                    <architecture>x86_64</architecture>\n                    <rootDeviceType>ebs</rootDeviceType>\n                    <rootDeviceName>/dev/sda1</rootDeviceName>\n                    <blockDeviceMapping>\n                        <item>\n                            <deviceName>/dev/sda1</deviceName>\n                            <ebs>\n                                <volumeId>vol-085cf057fc0d9953d</volumeId>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                            </ebs>\n                        </item>\n                    </blockDeviceMapping>\n                    <virtualizationType>hvm</virtualizationType>\n                    <clientToken/>\n                    <hypervisor>xen</hypervisor>\n                    <networkInterfaceSet>\n                        <item>\n                            <networkInterfaceId>eni-0c850a5695cfef3e3</networkInterfaceId>\n                            <subnetId>subnet-389cb974</subnetId>\n                            <vpcId>vpc-9fe17ef4</vpcId>\n                            <description/>\n                            <ownerId>413985338260</ownerId>\n                            <status>in-use</status>\n                            <macAddress>0a:2b:2f:2d:1d:dc</macAddress>\n                            <privateIpAddress>172.31.36.142</privateIpAddress>\n                            <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                            <sourceDestCheck>true</sourceDestCheck>\n                            <groupSet>\n                                <item>\n                                    <groupId>sg-016ee93ecb20b987e</groupId>\n                                    <groupName>launch-wizard-1</groupName>\n                                </item>\n                            </groupSet>\n                            <attachment>\n                                <attachmentId>eni-attach-044280d42f2d34ff9</attachmentId>\n                                <deviceIndex>0</deviceIndex>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:11.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                                <networkCardIndex>0</networkCardIndex>\n                            </attachment>\n                            <association>\n                                <publicIp>3.143.216.57</publicIp>\n                                <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                <ipOwnerId>amazon</ipOwnerId>\n                            </association>\n                            <privateIpAddressesSet>\n                                <item>\n                                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                                    <primary>true</primary>\n                                    <association>\n                                    <publicIp>3.143.216.57</publicIp>\n                                    <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                    <ipOwnerId>amazon</ipOwnerId>\n                                    </association>\n                                </item>\n                            </privateIpAddressesSet>\n                            <ipv6AddressesSet/>\n                            <interfaceType>interface</interfaceType>\n                        </item>\n                    </networkInterfaceSet>\n                    <ebsOptimized>false</ebsOptimized>\n                    <enaSupport>true</enaSupport>\n                    <cpuOptions>\n                        <coreCount>1</coreCount>\n                        <threadsPerCore>1</threadsPerCore>\n                    </cpuOptions>\n                    <capacityReservationSpecification>\n                        <capacityReservationPreference>open</capacityReservationPreference>\n                    </capacityReservationSpecification>\n                    <hibernationOptions>\n                        <configured>false</configured>\n                    </hibernationOptions>\n                    <enclaveOptions>\n                        <enabled>false</enabled>\n                    </enclaveOptions>\n                    <metadataOptions>\n                        <state>applied</state>\n                        <httpTokens>optional</httpTokens>\n                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>\n                        <httpEndpoint>enabled</httpEndpoint>\n                    </metadataOptions>\n                    <privateDnsNameOptions/>\n                </item>\n            </instancesSet>\n        </item>\n    </reservationSet>\n</DescribeInstancesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x7ff3149236d0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7ff3131a0310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <function generate_idempotent_uuid at 0x7ff31319b040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeVolumes: calling handler <function inject_api_version_header_if_needed at 0x7ff31319d8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeVolumes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeVolumes', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7ff314903cd0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeVolumes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7ff314903af0>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeVolumes: calling handler <function set_operation_specific_signer at 0x7ff313197ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024654Z
+
+content-type;host;x-amz-date
+925be3c8fc6870a890a6670574a88c988b51f13d9ea74f458ce9b6972534f164
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024654Z
+20210618/us-east-2/ec2/aws4_request
+a2bf6fb927722d8ee8edef87fd9cc7377932aff999a69f1c4c8f72a9492e763e
+DEBUG:botocore.auth:Signature:
+5a8a1ea60e02f606d213e2a03c7fd425f8af620374a5e22727af13fb54d034a0
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024654Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=5a8a1ea60e02f606d213e2a03c7fd425f8af620374a5e22727af13fb54d034a0', 'Content-Length': '41'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 1201
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '01bd85e3-4864-4179-945c-3b100010a3c1', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '1201', 'Date': 'Fri, 18 Jun 2021 02:46:54 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeVolumesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>01bd85e3-4864-4179-945c-3b100010a3c1</requestId>\n    <volumeSet>\n        <item>\n            <volumeId>vol-085cf057fc0d9953d</volumeId>\n            <size>8</size>\n            <snapshotId>snap-05bc449e542abbf3d</snapshotId>\n            <availabilityZone>us-east-2c</availabilityZone>\n            <status>in-use</status>\n            <createTime>2021-06-07T14:49:12.109Z</createTime>\n            <attachmentSet>\n                <item>\n                    <volumeId>vol-085cf057fc0d9953d</volumeId>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <device>/dev/sda1</device>\n                    <status>attached</status>\n                    <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                    <deleteOnTermination>true</deleteOnTermination>\n                </item>\n            </attachmentSet>\n            <volumeType>gp2</volumeType>\n            <iops>100</iops>\n            <encrypted>false</encrypted>\n            <multiAttachEnabled>false</multiAttachEnabled>\n        </item>\n    </volumeSet>\n</DescribeVolumesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeVolumes: calling handler <botocore.retryhandler.RetryHandler object at 0x7ff3149236d0>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:-----------------------------------------------------------------
+INFO:root:-----------------------------------------------------------------
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+DEBUG:botocore.hooks:Event before-parameter-build.iam.ListUsers: calling handler <function generate_idempotent_uuid at 0x7ff31319b040>
+DEBUG:botocore.hooks:Event before-call.iam.ListUsers: calling handler <function inject_api_version_header_if_needed at 0x7ff31319d8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=ListUsers) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'ListUsers', 'Version': '2010-05-08'}, 'url': 'https://iam.amazonaws.com/', 'context': {'client_region': 'aws-global', 'client_config': <botocore.config.Config object at 0x7ff314e6c460>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.iam.ListUsers: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7ff314e6c3d0>>
+DEBUG:botocore.hooks:Event choose-signer.iam.ListUsers: calling handler <function set_operation_specific_signer at 0x7ff313197ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:iam.amazonaws.com
+x-amz-date:20210618T024654Z
+
+content-type;host;x-amz-date
+b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024654Z
+20210618/us-east-1/iam/aws4_request
+a61feb5b2b159f5457adf924b9692da038fb70020821d1d11f9b19c7ae421a45
+DEBUG:botocore.auth:Signature:
+f33d267f98110b7ec4afcc46b8054b2fbefd4055286438dd1f18fcaf97d967a1
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://iam.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024654Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=f33d267f98110b7ec4afcc46b8054b2fbefd4055286438dd1f18fcaf97d967a1', 'Content-Length': '35'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): iam.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://iam.amazonaws.com:443 "POST / HTTP/1.1" 200 547
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': 'bdf199a7-44b3-4f26-8d63-04ad94bcf058', 'Content-Type': 'text/xml', 'Content-Length': '547', 'Date': 'Fri, 18 Jun 2021 02:46:55 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'<ListUsersResponse xmlns="https://iam.amazonaws.com/doc/2010-05-08/">\n  <ListUsersResult>\n    <IsTruncated>false</IsTruncated>\n    <Users>\n      <member>\n        <Path>/</Path>\n        <Arn>arn:aws:iam::413985338260:user/user1</Arn>\n        <UserName>user1</UserName>\n        <UserId>AIDAWAY3S6OKL4TICOEAF</UserId>\n        <CreateDate>2021-06-04T19:34:16Z</CreateDate>\n      </member>\n    </Users>\n  </ListUsersResult>\n  <ResponseMetadata>\n    <RequestId>bdf199a7-44b3-4f26-8d63-04ad94bcf058</RequestId>\n  </ResponseMetadata>\n</ListUsersResponse>\n'
+DEBUG:botocore.hooks:Event needs-retry.iam.ListUsers: calling handler <botocore.retryhandler.RetryHandler object at 0x7ff314e6cd60>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event after-call.iam.ListUsers: calling handler <function json_decode_policies at 0x7ff31319bb80>
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7ff31317ab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7ff31312a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7ff31317ab80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7ff31312a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7ff31369a820>
+INFO:root:Volumes -> 
+INFO:root:{'Volumes': [{'Size': 8}]}
+INFO:root:Congratulations, you successfully added a mock instance!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+INFO:root:Entered rendering function!
+DEBUG:botocore.hooks:Changing event name from creating-client-class.iot-data to creating-client-class.iot-data-plane
+DEBUG:botocore.hooks:Changing event name from before-call.apigateway to before-call.api-gateway
+DEBUG:botocore.hooks:Changing event name from request-created.machinelearning.Predict to request-created.machine-learning.Predict
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.autoscaling.CreateLaunchConfiguration to before-parameter-build.auto-scaling.CreateLaunchConfiguration
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.route53 to before-parameter-build.route-53
+DEBUG:botocore.hooks:Changing event name from request-created.cloudsearchdomain.Search to request-created.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.autoscaling.CreateLaunchConfiguration.complete-section to docs.*.auto-scaling.CreateLaunchConfiguration.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.logs.CreateExportTask to before-parameter-build.cloudwatch-logs.CreateExportTask
+DEBUG:botocore.hooks:Changing event name from docs.*.logs.CreateExportTask.complete-section to docs.*.cloudwatch-logs.CreateExportTask.complete-section
+DEBUG:botocore.hooks:Changing event name from before-parameter-build.cloudsearchdomain.Search to before-parameter-build.cloudsearch-domain.Search
+DEBUG:botocore.hooks:Changing event name from docs.*.cloudsearchdomain.Search.complete-section to docs.*.cloudsearch-domain.Search.complete-section
+DEBUG:botocore.utils:IMDS ENDPOINT: http://169.254.169.254/
+DEBUG:botocore.credentials:Looking for credentials via: env
+DEBUG:botocore.credentials:Looking for credentials via: assume-role
+DEBUG:botocore.credentials:Looking for credentials via: assume-role-with-web-identity
+DEBUG:botocore.credentials:Looking for credentials via: sso
+DEBUG:botocore.credentials:Looking for credentials via: shared-credentials-file
+INFO:botocore.credentials:Found credentials in shared credentials file: ~/.aws/credentials
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/endpoints.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fbf017bcb80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/ec2/2016-11-15/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fbf0176a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/_retry.json
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/boto3/data/ec2/2016-11-15/resources-1.json
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fbf017bcb80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fbf0176a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7fbf01c9a820>
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fbf017bcb80>
+DEBUG:botocore.loaders:Loading JSON file: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/botocore/data/iam/2010-05-08/service-2.json
+DEBUG:botocore.hooks:Event creating-client-class.iam: calling handler <function add_generate_presigned_url at 0x7fbf0176a8b0>
+DEBUG:botocore.regions:Using partition endpoint for iam, us-east-2: aws-global
+DEBUG:botocore.endpoint:Setting iam timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: iam
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7fbf017e0310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeInstances: calling handler <function generate_idempotent_uuid at 0x7fbf017db040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeInstances: calling handler <function inject_api_version_header_if_needed at 0x7fbf017dd8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeInstances) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeInstances', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7fbf02f03cd0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeInstances: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fbf02f03af0>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeInstances: calling handler <function set_operation_specific_signer at 0x7fbf017d7ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024931Z
+
+content-type;host;x-amz-date
+6171eb09865e32b0602af0f7957e26573a51f53caaedff02ff88883cb0275885
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024931Z
+20210618/us-east-2/ec2/aws4_request
+41d69a314be3845af5faafed1dc087a033b1193bc33dd8219766755bd9ff4f6f
+DEBUG:botocore.auth:Signature:
+840958111678975170c8d261b9c696529f5f64c9eca634627adf6bf7b418da25
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024931Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=840958111678975170c8d261b9c696529f5f64c9eca634627adf6bf7b418da25', 'Content-Length': '43'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): ec2.us-east-2.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 7097
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '09f1e837-216a-4874-8671-32ba533432b8', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '7097', 'vary': 'accept-encoding', 'Date': 'Fri, 18 Jun 2021 02:49:32 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeInstancesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>09f1e837-216a-4874-8671-32ba533432b8</requestId>\n    <reservationSet>\n        <item>\n            <reservationId>r-07694edafe46b7850</reservationId>\n            <ownerId>413985338260</ownerId>\n            <groupSet/>\n            <instancesSet>\n                <item>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <imageId>ami-0b9064170e32bde34</imageId>\n                    <instanceState>\n                        <code>16</code>\n                        <name>running</name>\n                    </instanceState>\n                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                    <dnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</dnsName>\n                    <reason/>\n                    <keyName>29656536_New</keyName>\n                    <amiLaunchIndex>0</amiLaunchIndex>\n                    <productCodes/>\n                    <instanceType>t2.micro</instanceType>\n                    <launchTime>2021-06-07T14:49:11.000Z</launchTime>\n                    <placement>\n                        <availabilityZone>us-east-2c</availabilityZone>\n                        <groupName/>\n                        <tenancy>default</tenancy>\n                    </placement>\n                    <monitoring>\n                        <state>disabled</state>\n                    </monitoring>\n                    <subnetId>subnet-389cb974</subnetId>\n                    <vpcId>vpc-9fe17ef4</vpcId>\n                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                    <ipAddress>3.143.216.57</ipAddress>\n                    <sourceDestCheck>true</sourceDestCheck>\n                    <groupSet>\n                        <item>\n                            <groupId>sg-016ee93ecb20b987e</groupId>\n                            <groupName>launch-wizard-1</groupName>\n                        </item>\n                    </groupSet>\n                    <architecture>x86_64</architecture>\n                    <rootDeviceType>ebs</rootDeviceType>\n                    <rootDeviceName>/dev/sda1</rootDeviceName>\n                    <blockDeviceMapping>\n                        <item>\n                            <deviceName>/dev/sda1</deviceName>\n                            <ebs>\n                                <volumeId>vol-085cf057fc0d9953d</volumeId>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                            </ebs>\n                        </item>\n                    </blockDeviceMapping>\n                    <virtualizationType>hvm</virtualizationType>\n                    <clientToken/>\n                    <hypervisor>xen</hypervisor>\n                    <networkInterfaceSet>\n                        <item>\n                            <networkInterfaceId>eni-0c850a5695cfef3e3</networkInterfaceId>\n                            <subnetId>subnet-389cb974</subnetId>\n                            <vpcId>vpc-9fe17ef4</vpcId>\n                            <description/>\n                            <ownerId>413985338260</ownerId>\n                            <status>in-use</status>\n                            <macAddress>0a:2b:2f:2d:1d:dc</macAddress>\n                            <privateIpAddress>172.31.36.142</privateIpAddress>\n                            <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                            <sourceDestCheck>true</sourceDestCheck>\n                            <groupSet>\n                                <item>\n                                    <groupId>sg-016ee93ecb20b987e</groupId>\n                                    <groupName>launch-wizard-1</groupName>\n                                </item>\n                            </groupSet>\n                            <attachment>\n                                <attachmentId>eni-attach-044280d42f2d34ff9</attachmentId>\n                                <deviceIndex>0</deviceIndex>\n                                <status>attached</status>\n                                <attachTime>2021-06-07T14:49:11.000Z</attachTime>\n                                <deleteOnTermination>true</deleteOnTermination>\n                                <networkCardIndex>0</networkCardIndex>\n                            </attachment>\n                            <association>\n                                <publicIp>3.143.216.57</publicIp>\n                                <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                <ipOwnerId>amazon</ipOwnerId>\n                            </association>\n                            <privateIpAddressesSet>\n                                <item>\n                                    <privateIpAddress>172.31.36.142</privateIpAddress>\n                                    <privateDnsName>ip-172-31-36-142.us-east-2.compute.internal</privateDnsName>\n                                    <primary>true</primary>\n                                    <association>\n                                    <publicIp>3.143.216.57</publicIp>\n                                    <publicDnsName>ec2-3-143-216-57.us-east-2.compute.amazonaws.com</publicDnsName>\n                                    <ipOwnerId>amazon</ipOwnerId>\n                                    </association>\n                                </item>\n                            </privateIpAddressesSet>\n                            <ipv6AddressesSet/>\n                            <interfaceType>interface</interfaceType>\n                        </item>\n                    </networkInterfaceSet>\n                    <ebsOptimized>false</ebsOptimized>\n                    <enaSupport>true</enaSupport>\n                    <cpuOptions>\n                        <coreCount>1</coreCount>\n                        <threadsPerCore>1</threadsPerCore>\n                    </cpuOptions>\n                    <capacityReservationSpecification>\n                        <capacityReservationPreference>open</capacityReservationPreference>\n                    </capacityReservationSpecification>\n                    <hibernationOptions>\n                        <configured>false</configured>\n                    </hibernationOptions>\n                    <enclaveOptions>\n                        <enabled>false</enabled>\n                    </enclaveOptions>\n                    <metadataOptions>\n                        <state>applied</state>\n                        <httpTokens>optional</httpTokens>\n                        <httpPutResponseHopLimit>1</httpPutResponseHopLimit>\n                        <httpEndpoint>enabled</httpEndpoint>\n                    </metadataOptions>\n                    <privateDnsNameOptions/>\n                </item>\n            </instancesSet>\n        </item>\n    </reservationSet>\n</DescribeInstancesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeInstances: calling handler <botocore.retryhandler.RetryHandler object at 0x7fbf02f236d0>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <bound method ParameterAlias.alias_parameter_in_call of <botocore.handlers.ParameterAlias object at 0x7fbf017e0310>>
+DEBUG:botocore.hooks:Event before-parameter-build.ec2.DescribeVolumes: calling handler <function generate_idempotent_uuid at 0x7fbf017db040>
+DEBUG:botocore.hooks:Event before-call.ec2.DescribeVolumes: calling handler <function inject_api_version_header_if_needed at 0x7fbf017dd8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=DescribeVolumes) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'DescribeVolumes', 'Version': '2016-11-15'}, 'url': 'https://ec2.us-east-2.amazonaws.com/', 'context': {'client_region': 'us-east-2', 'client_config': <botocore.config.Config object at 0x7fbf02f03cd0>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.ec2.DescribeVolumes: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fbf02f03af0>>
+DEBUG:botocore.hooks:Event choose-signer.ec2.DescribeVolumes: calling handler <function set_operation_specific_signer at 0x7fbf017d7ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:ec2.us-east-2.amazonaws.com
+x-amz-date:20210618T024932Z
+
+content-type;host;x-amz-date
+925be3c8fc6870a890a6670574a88c988b51f13d9ea74f458ce9b6972534f164
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024932Z
+20210618/us-east-2/ec2/aws4_request
+a9a139da331c427a1074337a905ebaeaf19b2492563fc0f4380ba5ed307faa22
+DEBUG:botocore.auth:Signature:
+708d4a2ca0b649c67b949fafe5d7d0565a66406bcdbec6fcbd06453d23cfb8fb
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://ec2.us-east-2.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024932Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-2/ec2/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=708d4a2ca0b649c67b949fafe5d7d0565a66406bcdbec6fcbd06453d23cfb8fb', 'Content-Length': '41'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:https://ec2.us-east-2.amazonaws.com:443 "POST / HTTP/1.1" 200 1201
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '16308d71-1ea5-4461-a097-bd903c1cfbb7', 'Cache-Control': 'no-cache, no-store', 'Strict-Transport-Security': 'max-age=31536000; includeSubDomains', 'Content-Type': 'text/xml;charset=UTF-8', 'Content-Length': '1201', 'Date': 'Fri, 18 Jun 2021 02:49:32 GMT', 'Server': 'AmazonEC2'}
+DEBUG:botocore.parsers:Response body:
+b'<?xml version="1.0" encoding="UTF-8"?>\n<DescribeVolumesResponse xmlns="http://ec2.amazonaws.com/doc/2016-11-15/">\n    <requestId>16308d71-1ea5-4461-a097-bd903c1cfbb7</requestId>\n    <volumeSet>\n        <item>\n            <volumeId>vol-085cf057fc0d9953d</volumeId>\n            <size>8</size>\n            <snapshotId>snap-05bc449e542abbf3d</snapshotId>\n            <availabilityZone>us-east-2c</availabilityZone>\n            <status>in-use</status>\n            <createTime>2021-06-07T14:49:12.109Z</createTime>\n            <attachmentSet>\n                <item>\n                    <volumeId>vol-085cf057fc0d9953d</volumeId>\n                    <instanceId>i-0763b55c052098e49</instanceId>\n                    <device>/dev/sda1</device>\n                    <status>attached</status>\n                    <attachTime>2021-06-07T14:49:12.000Z</attachTime>\n                    <deleteOnTermination>true</deleteOnTermination>\n                </item>\n            </attachmentSet>\n            <volumeType>gp2</volumeType>\n            <iops>100</iops>\n            <encrypted>false</encrypted>\n            <multiAttachEnabled>false</multiAttachEnabled>\n        </item>\n    </volumeSet>\n</DescribeVolumesResponse>'
+DEBUG:botocore.hooks:Event needs-retry.ec2.DescribeVolumes: calling handler <botocore.retryhandler.RetryHandler object at 0x7fbf02f236d0>
+DEBUG:botocore.retryhandler:No retry needed.
+INFO:root:-----------------------------------------------------------------
+INFO:root:-----------------------------------------------------------------
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+DEBUG:botocore.hooks:Event before-parameter-build.iam.ListUsers: calling handler <function generate_idempotent_uuid at 0x7fbf017db040>
+DEBUG:botocore.hooks:Event before-call.iam.ListUsers: calling handler <function inject_api_version_header_if_needed at 0x7fbf017dd8b0>
+DEBUG:botocore.endpoint:Making request for OperationModel(name=ListUsers) with params: {'url_path': '/', 'query_string': '', 'method': 'POST', 'headers': {'Content-Type': 'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': 'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33'}, 'body': {'Action': 'ListUsers', 'Version': '2010-05-08'}, 'url': 'https://iam.amazonaws.com/', 'context': {'client_region': 'aws-global', 'client_config': <botocore.config.Config object at 0x7fbf0346c460>, 'has_streaming_input': False, 'auth_type': None}}
+DEBUG:botocore.hooks:Event request-created.iam.ListUsers: calling handler <bound method RequestSigner.handler of <botocore.signers.RequestSigner object at 0x7fbf0346c3d0>>
+DEBUG:botocore.hooks:Event choose-signer.iam.ListUsers: calling handler <function set_operation_specific_signer at 0x7fbf017d7ee0>
+DEBUG:botocore.auth:Calculating signature using v4 auth.
+DEBUG:botocore.auth:CanonicalRequest:
+POST
+/
+
+content-type:application/x-www-form-urlencoded; charset=utf-8
+host:iam.amazonaws.com
+x-amz-date:20210618T024932Z
+
+content-type;host;x-amz-date
+b6359072c78d70ebee1e81adcbab4f01bf2c23245fa365ef83fe8f1f955085e2
+DEBUG:botocore.auth:StringToSign:
+AWS4-HMAC-SHA256
+20210618T024932Z
+20210618/us-east-1/iam/aws4_request
+9b665d107d881d18a7960039671f1493d081f891f98fe0451ce1866b324c4863
+DEBUG:botocore.auth:Signature:
+717ee9940d7a772cdd05298b19b00c89dd742b92d0de01363dc07a408226e453
+DEBUG:botocore.endpoint:Sending http request: <AWSPreparedRequest stream_output=False, method=POST, url=https://iam.amazonaws.com/, headers={'Content-Type': b'application/x-www-form-urlencoded; charset=utf-8', 'User-Agent': b'Boto3/1.17.33 Python/3.9.5 Darwin/19.6.0 Botocore/1.20.33', 'X-Amz-Date': b'20210618T024932Z', 'Authorization': b'AWS4-HMAC-SHA256 Credential=AKIAWAY3S6OKGJDUCWWZ/20210618/us-east-1/iam/aws4_request, SignedHeaders=content-type;host;x-amz-date, Signature=717ee9940d7a772cdd05298b19b00c89dd742b92d0de01363dc07a408226e453', 'Content-Length': '35'}>
+DEBUG:botocore.httpsession:Certificate path: /Users/ashraywadhwa/.local/share/virtualenvs/django_armor-seUM3Oc-/lib/python3.9/site-packages/certifi/cacert.pem
+DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): iam.amazonaws.com:443
+DEBUG:urllib3.connectionpool:https://iam.amazonaws.com:443 "POST / HTTP/1.1" 200 547
+DEBUG:botocore.parsers:Response headers: {'x-amzn-RequestId': '7182d74f-730f-4378-a5ee-6b2746acc740', 'Content-Type': 'text/xml', 'Content-Length': '547', 'Date': 'Fri, 18 Jun 2021 02:49:32 GMT'}
+DEBUG:botocore.parsers:Response body:
+b'<ListUsersResponse xmlns="https://iam.amazonaws.com/doc/2010-05-08/">\n  <ListUsersResult>\n    <IsTruncated>false</IsTruncated>\n    <Users>\n      <member>\n        <Path>/</Path>\n        <Arn>arn:aws:iam::413985338260:user/user1</Arn>\n        <UserName>user1</UserName>\n        <UserId>AIDAWAY3S6OKL4TICOEAF</UserId>\n        <CreateDate>2021-06-04T19:34:16Z</CreateDate>\n      </member>\n    </Users>\n  </ListUsersResult>\n  <ResponseMetadata>\n    <RequestId>7182d74f-730f-4378-a5ee-6b2746acc740</RequestId>\n  </ResponseMetadata>\n</ListUsersResponse>\n'
+DEBUG:botocore.hooks:Event needs-retry.iam.ListUsers: calling handler <botocore.retryhandler.RetryHandler object at 0x7fbf0346cd60>
+DEBUG:botocore.retryhandler:No retry needed.
+DEBUG:botocore.hooks:Event after-call.iam.ListUsers: calling handler <function json_decode_policies at 0x7fbf017dbb80>
+DEBUG:asyncio:Using selector: KqueueSelector
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fbf017bcb80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fbf0176a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:botocore.hooks:Event choose-service-name: calling handler <function handle_service_name_alias at 0x7fbf017bcb80>
+DEBUG:botocore.hooks:Event creating-client-class.ec2: calling handler <function add_generate_presigned_url at 0x7fbf0176a8b0>
+DEBUG:botocore.endpoint:Setting ec2 timeout as (60, 60)
+DEBUG:botocore.client:Registering retry handlers for service: ec2
+DEBUG:boto3.resources.factory:Loading ec2:ec2
+DEBUG:botocore.hooks:Event creating-resource-class.ec2.ServiceResource: calling handler <function lazy_call.<locals>._handler at 0x7fbf01c9a820>
+INFO:root:Congratulations, you successfully added a mock instance!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_instances!
+INFO:root:Entered decribe_volumes!
+INFO:root:Entered rendering function!

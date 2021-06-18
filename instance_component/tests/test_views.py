@@ -5,6 +5,8 @@ import botocore
 import boto3
 import pytest
 import os
+import logging
+logging.basicConfig(level=logging.DEBUG, filename='log_test_output.txt')
 
 from django.test import TestCase, Client
 from django.urls import reverse
@@ -77,13 +79,13 @@ class TestViews(TestCase):
             ec2_resource = boto3.resource('ec2', region_name='us-west-1')
             my_list = []
             e = client.describe_instances()
-            print(client.describe_volumes())
             e2 = client.describe_volumes()
             object = e['Reservations'][0]['Instances']
             object2 = e2['Volumes'][0]
             if len(object)==0:
-                print("Add a mock instance!")
+                logging.warning("Add a mock instance!")
             else:
+                logging.info("Congratulations, you successfully added a mock instance!")
                 self.assertEquals(object[0]['InstanceId'], create_instance_list(instance=e, resource=ec2_resource, list=my_list, code=1)[0]['instanceID'])
                 self.assertEquals(object[0]['BlockDeviceMappings'][0]['Ebs']['Status'], create_instance_list(instance=e, resource=ec2_resource, list=my_list, code=1)[0]['Ebs_status'])
                 self.assertEquals(object[0]['BlockDeviceMappings'][0]['Ebs']['VolumeId'], create_instance_list(instance=e, resource=ec2_resource, list=my_list, code=1)[0]['Ebs_volume'])
