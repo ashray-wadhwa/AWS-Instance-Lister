@@ -1,0 +1,243 @@
+
+{% load account_properties %}
+<body>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Exo:400,700');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 30px;
+}
+img{
+        width: auto;
+}
+
+.context {
+    width: 100%;
+    position: absolute;
+    top:5vh;
+    color: #fff;
+    text-align: center;
+    padding-top: 7em;
+}
+
+.context h1 li img{
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+.context h1 {
+    font-size: 62px;
+}
+
+
+
+.area{
+    background: #4e54c8;  
+    background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8);  
+    width: 100%;
+    height:100vh;
+    
+   
+}
+
+.circles{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    
+}
+
+.circles li:nth-child(1){
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2){
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3){
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4){
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5){
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6){
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7){
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8){
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9){
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10){
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+table{
+    text-align: center;
+    margin-left: 12em;
+}
+table, th, td{
+    border: 1px solid darkblue;
+    font-size: large;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border-collapse: collapse;
+}
+
+th, td{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+h2{
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+
+
+@keyframes animate {
+
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100%{
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+    </style>
+    <!-- Sourced from https://www.pinclipart.com/pindetail/iRTJimJ_service-catalog-academic-technologies-transparent-background-e-waste/ -->
+    <div class="context">
+        </table>
+        <h1>Instances linked with your AWS Account:</h1>
+
+
+        {% if instances %}
+        <table class="instanceTable">
+            {% for instance in instances %}
+            {% comment %}Instance ID --> EBS Volume --> EBS Status --> <!-- {% if insances%} --> {% endcomment %}
+        <tr>
+            <th>Serial</th>
+            <th>Instance ID</th>
+            <th>EBS Volume ID</th>
+            <th>EBS Volume Size</th>
+            <th>Encyption Status</th>
+
+        </tr>
+        <tr> 
+                <td>{{ forloop.counter }}</td>
+                <td> {{ instance|get_item:'instanceID' }} </td>
+                <td>{{ instance|get_item:'Ebs_volume' }}</td>
+                <td>{{ instance|get_item:'Ebs_size' }} GiB</td>
+                <td>{{ instance|get_item:'Ebs_status' }} </td>
+        </tr> 
+            {% endfor %}
+        </table>
+        {% else %}
+        <h1>No instances are linked!</h1>
+        {% endif %}
+    </div>
+
+
+    <h2>Number of Users linked with AWS Account: {{ counter }} </h2>
+
+
+
+<div class="area" >
+            <ul class="circles">
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+            </ul>
+    </div >
+</body>
+
+
+{% comment %} <!-- User {{ instance["User"] }}  --> {% endcomment %}
