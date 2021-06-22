@@ -17,7 +17,7 @@ img{
         width: auto;
 }
 
-.context {
+.table_design {
     width: 100%;
     position: absolute;
     top:5vh;
@@ -26,13 +26,13 @@ img{
     padding-top: 7em;
 }
 
-.context h1 li img{
+.table_design h1 li img{
     text-align: center;
     color: #fff;
     font-size: 50px;
 }
 
-.context h1 {
+..table_design h1 {
     font-size: 62px;
 }
 
@@ -188,6 +188,7 @@ h2{
     </style>
     <!-- Sourced from https://www.pinclipart.com/pindetail/iRTJimJ_service-catalog-academic-technologies-transparent-background-e-waste/ -->
     <div class="context">
+        <div class="table_design">
         </table>
         <h1>Instances linked with your AWS Account:</h1>
 
@@ -216,10 +217,15 @@ h2{
         {% else %}
         <h1>No instances are linked!</h1>
         {% endif %}
+        </div>
+        <div>
+            <h2>Number of Users linked with AWS Account: {{ counter }} </h2>
+        </div>
     </div>
 
 
-    <h2>Number of Users linked with AWS Account: {{ counter }} </h2>
+
+
 
 
 

@@ -1,30 +1,31 @@
 from django.http.response import HttpResponse
 from django.shortcuts import render
-import sys
 import boto3
 import logging
 logging.basicConfig(level=logging.DEBUG, filename='log_test_views.txt')
 
-ec2 = boto3.client('ec2')
+
+client = boto3.client('ec2')
 ec2_resource = boto3.resource('ec2', region_name='us-east-2')
+response_instance = client.describe_instances()
+response_instance2 = client.describe_volumes()
+
 iam_client = boto3.client('iam') 
-# client2 = boto3.client('organizations')
-response_instance = ec2.describe_instances()
-response_instance2 = ec2.describe_volumes()
-instance_list = []
+iam_response = iam_client.list_users()
+
 # log = open("myprog.log", "a")
 # sys.stdout = log
 
 logging.info("-----------------------------------------------------------------")
 
-def create_instance_list(instance, resource, list, code):
+instance_list = []
+def create_instance_list(instance, resource, list):
     if (instance == False):
         logging.warning('No instances on the account!')
     else:
         instance_map = {}
-        # print(response_instance)
-        if(code == 1):
-            logging.info('Entered decribe_instances!')
+        if 'Reservations' in instance.keys():
+            logging.info('Entered describe_instances!')
             for r in instance['Reservations']:
                 volume_counter=0
                 for i in r['Instances']:
@@ -35,8 +36,8 @@ def create_instance_list(instance, resource, list, code):
                     list.append(instance_map.copy())
                     instance_map.clear()
                     volume_counter=volume_counter+1
-        elif(code == 2):
-            logging.info('Entered decribe_volumes!')
+        elif 'Volumes' in instance.keys():
+            logging.info('Entered describe_volumes!')
             my_count=0
             for r in instance['Volumes']:
                 if(len(list) != 0):
@@ -48,21 +49,31 @@ def create_instance_list(instance, resource, list, code):
             my_count += 1
     return list
 
+create_instance_list(instance=response_instance, resource=ec2_resource, list=instance_list)
+create_instance_list(instance=response_instance2, resource=ec2_resource, list=instance_list)
+
 logging.info("-----------------------------------------------------------------")
 
-create_instance_list(instance=response_instance, resource=ec2_resource, list=instance_list, code=1)
-create_instance_list(instance=response_instance2, resource=ec2_resource, list=instance_list, code=2)
+count_users = []
+def create_userinfo(users, count):
+    if (users == False):
+        logging.warning('No users are linked to this account!')
+    else:
+        logging.info('Entered list_users!')
+        temp_counter = 0
+        for x in users['Users']:
+            temp_counter = temp_counter+1
+            count.append(temp_counter)
+    return count
 
-response = iam_client.list_users()
-counter = 0
-for x in response['Users']:
-    counter = counter+1
+create_userinfo(users=iam_response, count=count_users)
+counter = count_users[len(count_users)-1]
 
-# from django.http import HttpResponse
-# Create your views here.
+logging.info("-----------------------------------------------------------------")
+
+
 def instanceView(request):
-    # return HttpResponse('hello, this is instanceView')
     logging.info("Entered rendering function!")
     return render(request, 'pages/instance_temp.html', {"instances": instance_list, "counter":counter})
-    # , "types": typeList
-    # , "sizeList":sizeList
+
+logging.info("-----------------------------------------------------------------")
